@@ -71,19 +71,7 @@ su - vagrant -c "mkdir -p /home/vagrant/.pip_download_cache"
 
 # Enables add-apt-repository
 apt-get install -y python-software-properties
-# Add dart PPA repo
-yes | add-apt-repository ppa:hachre/dart
-# Install dart.
-apt-get update
-apt-get install -y dartsdk
 
-
-# Update ruby gems system
-gem update --system
-
-# Install sass && compass
-gem install sass
-gem install compass
 
 # ---
 
