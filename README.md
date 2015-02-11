@@ -1,8 +1,19 @@
 # unchained
 ## virtual django development (batteries included!)
-(a customized version of torchbox/vagrant-django-template)
 
-### Features
+This project is a customized version of torchbox/vagrant-django-template with extra features out of the box and designed to quickly deploy projects to DigitalOcean.
+
+### One-command first-deploy to DigitalOcean
+1. Open `deploy.py`
+2. Set the DIGITALOCEAN_TOKEN setting to a valid DigitalOcean Personal Access Token with read permissions.
+3. Optionally edit any other setting to customize the droplet that will be created.
+4. Run `fab first-deploy`. This will create the droplet, deploy your code, and set up NGINX and Gunicorn. This command will also output your site's IP address.
+5. Add that IP address to `fabfile.py`.
+
+### fab deploy
+1. From then on, run `fab deploy` to update your site on the droplet.
+
+### Feature Overview
 * Pre-configured Fabfile for deploying via Git.
 * One-command first deploy to a DigitalOcean droplet.
 * Vagrantfile for building an Ubuntu Precise based VM
